@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wylde Jewellers - Bristol | Premium Goldsmith & Bespoke Design</title>
+    <meta name="description" content="Wylde Jewellers - Bristol: Your premium Goldsmith for exquisite custom jewellery, repairs, and bespoke designs. Serving Clifton, Bristol, with unparalleled craftsmanship and a commitment to quality. Book a free consultation today.">
+    <meta name="keywords" content="Goldsmith Bristol, Jewellers Clifton, Bespoke Jewellery Bristol, Custom Jewellery Bristol, Jewellery Repair Bristol, Wylde Jewellers, Engagement Rings Bristol, Wedding Rings Bristol, Free Consultation Jeweller, Quality Guaranteed Jewellery">
+    <meta name="author" content="Wylde Jewellers - Bristol">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Google Fonts Import */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+        /* CSS Variables & Global Reset */
+        :root {
+            --primary-dark: #1a1a2e;
+            --accent-blue: #4a90d9;
+            --background-light: #f8f9fa;
+            --text-dark: #333;
+            --text-light: #fff;
+            --border-light: #e0e0e0;
+            --shadow-light: rgba(0, 0, 0, 0.08);
+            --transition-speed: 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--background-light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Inter', sans-serif;
+            color: var(--primary-dark);
+            line-height: 1.2;
+            margin-bottom: 0.7em;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--accent-blue);
+            transition: color var(--transition-speed);
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden; /* For any potential background images extending */
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-blue);
+            color: var(--text-light);
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color var(--transition-speed), transform var(--transition-speed);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            color: var(--text-light); /* Keep text light on hover */
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #555;
+        }
+
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+        .text-primary-dark { color: var(--primary-dark); }
+        .text-accent-blue { color: var(--accent-blue); }
+        .bg-primary-dark { background-color: var(--primary-dark); }
+        .bg-accent-blue { background-color: var(--accent-blue); }
+        .bg-background-light { background-color: var(--background-light); }
+
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-light);
+            transition: color var(--transition-speed);
+        }
+
+        .navbar-brand:hover {
+            color: var(--accent-blue);
+        }
+
+        .nav-menu {
+            display: flex;
+        }
+
+        .nav-menu li {
+            margin-left: 2rem;
+        }
+
+        .nav-menu a {
+            color: var(--text-light);
+            font-weight: 500;
+            padding: 0.5rem 0;
+            position: relative;
+            transition: color var(--transition-speed);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-blue);
+            transition: width var(--transition-speed);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent-blue);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger .bar {
+            width: 25px;
+            height: 3px;
+            background-color: var(--text-light);
+            margin: 4px 0;
+            transition: var(--transition-speed);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 70vh; /* Adjust as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+            overflow: hidden;
+            background: linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.7)), url('https://source.unsplash.com/featured/1600x900/?Goldsmith,professional') no-repeat center center/cover;
+            background-attachment: fixed; /* Parallax effect */
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26, 26, 46, 0.6); /* Dark overlay */
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: #e0e0e0;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--text-light);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px var(--shadow-light);
+            padding: 2.5rem;
+            text-align: center;
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 280px;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: var(--accent-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            color: #555;
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card .cta-link {
+            font-weight: 600;
+            color: var(--accent-blue);
+            position: relative;
+        }
+
+        .service-card .cta-link::after {
+            content: '\2192'; /* Right arrow */
+            position: absolute;
+            right: -1.2em;
+            opacity: 0;
+            transition: opacity var(--transition-speed), right var(--transition-speed);
+        }
+
+        .service-card .cta-link:hover::after {
+            opacity: 1;
+            right: -1em;
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px var(--shadow-light);
+        }
+
+        .about-text {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .about-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Reviews Section */
+        .reviews {
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+        }
+
+        .reviews .section-header h2,
+        .reviews .section-header p {
+            color: var(--text-light);
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .review-card {
+            background-color: rgba(255, 255, 255, 0.08); /* Slightly transparent white */
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 250px;
+        }
+
+        .review-card .stars {
+            color: gold;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .review-card p {
+            font-style: italic;
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .review-author {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--accent-blue);
+        }
+
+        .review-author span {
+            font-weight: 400;
+            color: #ccc;
+            font-size: 0.9rem;
+            display: block;
+            margin-top: 0.3rem;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: var(--background-light);
+        }
+
+        .features .section-header h2 {
+            font-size: 2.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .features .section-header h2::before {
+            content: 'NOW AVAILABLE';
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--accent-blue);
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-item {
+            background-color: var(--text-light);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px var(--shadow-light);
+            padding: 2rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .feature-item i {
+            font-size: 2.5rem;
+            color: var(--accent-blue);
+            flex-shrink: 0;
+        }
+
+        .feature-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-dark);
+        }
+
+        .feature-content p {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 0; /* Remove default paragraph margin */
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info ul {
+            font-size: 1.1rem;
+        }
+
+        .contact-info ul li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-info ul li i {
+            color: var(--accent-blue);
+            font-size: 1.5rem;
+            margin-top: 0.2rem;
+        }
+
+        .contact-form {
+            flex: 2;
+            min-width: 300px;
+            background-color: var(--text-light);
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px var(--shadow-light);
+        }
+
+        .contact-form h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-dark);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            border: 1px solid var(--border-light);
+            border-radius: 5px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            color: var(--text-dark);
+            transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-form button.btn {
+            width: 100%;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            text-align: left;
+            gap: 2rem;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
+
+        .footer-col .navbar-brand {
+            display: block;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-col p, .footer-col ul li {
+            font-size: 0.95rem;
+            color: #e0e0e0;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a {
+            color: #e0e0e0;
+            transition: color var(--transition-speed);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-blue);
+        }
+
+        .footer-col address {
+            font-style: normal;
+        }
+
+        .footer-col .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col .contact-item i {
+            margin-right: 0.8rem;
+            color: var(--accent-blue);
+            font-size: 1rem;
+            margin-top: 0.2rem;
+        }
+
+        .footer-bottom {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #ccc;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+        }
+
+
+        /* Mobile Responsiveness */
+        @media (max-width: 992px) {
+            .navbar .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: var(--primary-dark);
+                position: absolute;
+                top: 67px; /* Adjust based on navbar height */
+                left: 0;
+                padding-bottom: 1rem;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+            }
+
+            .navbar .nav-menu.active {
+                display: flex;
+            }
+
+            .navbar .nav-menu li {
+                margin: 0;
+                text-align: center;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .navbar .nav-menu li:last-child {
+                border-bottom: none;
+            }
+
+            .navbar .nav-menu a {
+                display: block;
+                padding: 1rem 0;
+                color: var(--text-light);
+            }
+
+            .navbar .nav-menu a::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .navbar .hamburger {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .about-content, .contact-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-image img {
+                width: 80%; /* Smaller image on mobile */
+                margin: 0 auto;
+            }
+
+            .contact-info, .contact-form {
+                width: 100%;
+                min-width: unset;
+            }
+
+            .contact-info ul {
+                text-align: center;
+            }
+
+            .contact-info ul li {
+                justify-content: center;
+                align-items: center;
+            }
+
+            .footer .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-col {
+                min-width: unset;
+                width: 100%;
+            }
+
+            .footer-col .contact-item {
+                justify-content: center;
+            }
+
+            .features-grid, .service-grid, .review-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .section-header p {
+                font-size: 1rem;
+            }
+
+            .hero {
+                height: 60vh;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 0.7rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .service-card {
+                padding: 2rem 1.5rem;
+                min-height: 250px;
+            }
+
+            .service-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .service-card i {
+                font-size: 2.5rem;
+            }
+
+            .about-text h2, .contact-form h3, .contact-info h3 {
+                font-size: 1.6rem;
+            }
+
+            .feature-item {
+                padding: 1.5rem;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .feature-item i {
+                margin-bottom: 0.8rem;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .hero {
+                height: 50vh;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/441179743582" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="navbar-brand">Wylde Jewellers - Bristol</a>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Crafting Timeless Elegance in the Heart of Bristol</h1>
+            <p>Experience unparalleled craftsmanship and bespoke jewellery design with Wylde Jewellers – your trusted Goldsmith in Clifton.</p>
+            <a href="#contact" class="btn">Book a Free Consultation</a>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-background-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Bespoke Goldsmith Services</h2>
+                <p>At Wylde Jewellers, we offer a comprehensive range of services tailored to your unique needs, ensuring every piece reflects perfection.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-gem"></i>
+                    <h3>Goldsmith</h3>
+                    <p>Exceptional craftsmanship for custom designs, repairs, and restoration of your cherished pieces.</p>
+                    <a href="#contact" class="cta-link">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Free Consultation</h3>
+                    <p>Discuss your jewellery vision and requirements with our experts, entirely without obligation.</p>
+                    <a href="#contact" class="cta-link">Book Now</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Online Appointments</h3>
+                    <p>Conveniently schedule and conduct your consultation or design meeting from the comfort of your home.</p>
+                    <a href="#contact" class="cta-link">Schedule Online</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Expert Team</h3>
+                    <p>Benefit from the collective knowledge and artistic talent of our highly skilled and dedicated jewellers.</p>
+                    <a href="#about" class="cta-link">Meet the Team</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Quality Guaranteed</h3>
+                    <p>We stand by the enduring beauty and integrity of our work with an unwavering promise of excellence.</p>
+                    <a href="#contact" class="cta-link">Our Promise</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Customer Support</h3>
+                    <p>Dedicated assistance and guidance available at every stage of your unique jewellery journey.</p>
+                    <a href="#contact" class="cta-link">Get Support</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://source.unsplash.com/featured/900x600/?Goldsmith,team" alt="Wylde Jewellers Expert Team">
+                </div>
+                <div class="about-text">
+                    <h2>About Wylde Jewellers - Bristol</h2>
+                    <p>Located at 6 The Mall, Clifton, Wylde Jewellers - Bristol has been a beacon of exceptional craftsmanship and personal service for generations. As a premium Goldsmith, we pride ourselves on creating heirloom-quality pieces that capture moments and tell stories.</p>
+                    <p>Our dedicated <span class="text-primary-dark">Expert Team</span> brings passion and precision to every design, repair, and bespoke creation. From initial concept to final polish, we ensure meticulous attention to detail, upholding our <span class="text-primary-dark">Quality Guaranteed</span> promise.</p>
+                    <p>We believe in building lasting relationships with our clients, offering a warm and professional experience tailored to your unique needs. Come and discover the difference of truly bespoke British jewellery.</p>
+                    <a href="#contact" class="btn">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Valued Clients Say</h2>
+                <p>Hear from those who've experienced the Wylde Jewellers difference and trusted us with their precious moments.</p>
+            </div>
+            <div class="review-grid">
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"I had a bespoke engagement ring crafted, and the Goldsmith service was simply phenomenal. The <span class="text-accent-blue">Expert Team</span> guided me through every step, ensuring the final piece was beyond perfect. Truly Bristol's finest!"</p>
+                    <div class="review-author">Eleanor V.<span>Clifton, Bristol</span></div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"My antique brooch needed delicate repair, and Wylde Jewellers handled it with such care. The <span class="text-accent-blue">Quality Guaranteed</span> service really shone through, and their <span class="text-accent-blue">Customer Support</span> kept me informed at all times."</p>
+                    <div class="review-author">Marcus L.<span>Bath</span></div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Booking an <span class="text-accent-blue">Online Appointment</span> for a <span class="text-accent-blue">Free Consultation</span> was incredibly convenient. The advice was invaluable, and I felt completely at ease discussing my ideas. A truly professional and trustworthy experience."</p>
+                    <div class="review-author">Sophia K.<span>Portishead</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Enhancing Your Experience</h2>
+                <p>We're constantly innovating to provide you with seamless service and effortless access to our expertise.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-comments"></i>
+                    <div class="feature-content">
+                        <h3>Live Chat</h3>
+                        <p>Get instant support and answers to your questions, available 24/7 directly on our website.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <div class="feature-content">
+                        <h3>Online Booking</h3>
+                        <p>Effortlessly schedule your consultations and appointments at your convenience, without needing to call.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-robot"></i>
+                    <div class="feature-content">
+                        <h3>AI Assistant</h3>
+                        <p>Our intelligent AI can swiftly answer common questions about our services and process, anytime.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-phone-volume"></i>
+                    <div class="feature-content">
+                        <h3>AI Voice Agent</h3>
+                        <p>Ensuring every call is answered promptly, our AI voice agent means you never miss an opportunity to connect.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div class="feature-content">
+                        <h3>WhatsApp Integration</h3>
+                        <p>Connect with us instantly on WhatsApp for quick replies and seamless communication.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fab fa-google"></i>
+                    <div class="feature-content">
+                        <h3>Live Google Reviews</h3>
+                        <p>See our latest customer feedback, updated automatically on our site, showcasing real experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-background-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch With Wylde Jewellers</h2>
+                <p>We'd love to hear from you. Reach out to discuss your jewellery needs or book a consultation.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Visit & Connect</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i><span>6 The Mall, Clifton, Bristol BS8 4DR, United Kingdom</span></li>
+                        <li><i class="fas fa-phone"></i><a href="tel:+441179743582">+44 117 974 3582</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:bath@nicholaswylde.com">bath@nicholaswylde.com</a></li>
+                    </ul>
+                    <!-- Small map embed or link -->
+                    <div style="margin-top: 2rem;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.237242191563!2d-2.6186803842323336!3d51.45892017962828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48718e001a1d9575%3A0xb6d17b5f2a1b9a9b!2s6%20The%20Mall%2C%20Clifton%2C%20Bristol%20BS8%204DR%2C%20UK!5e0!3m2!1sen!2suk!4v1678912345678!5m2!1sen!2suk" width="100%" height="250" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us An Enquiry</h3>
+                    <form action="#" method="POST"> <!-- In a production environment, this would point to a backend script -->
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Your Phone (Optional)</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Interested Service</label>
+                            <select id="service" name="service" required>
+                                <option value="">Please Select</option>
+                                <option value="Goldsmith">Goldsmith</option>
+                                <option value="Free Consultation">Free Consultation</option>
+                                <option value="Online Appointments">Online Appointments</option>
+                                <option value="Expert Team">Expert Team</option>
+                                <option value="Quality Guaranteed">Quality Guaranteed</option>
+                                <option value="Customer Support">Customer Support</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Enquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-col">
+                <a href="#home" class="navbar-brand">Wylde Jewellers - Bristol</a>
+                <p>Premium Goldsmith services, crafting bespoke jewellery with trust and modern elegance in Clifton, Bristol.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#features">New Features</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><p>Goldsmith</p></li>
+                    <li><p>Free Consultation</p></li>
+                    <li><p>Online Appointments</p></li>
+                    <li><p>Expert Team</p></li>
+                    <li><p>Quality Guaranteed</p></li>
+                    <li><p>Customer Support</p></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <address>6 The Mall, Clifton, Bristol BS8 4DR, United Kingdom</address>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+441179743582">+44 117 974 3582</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:bath@nicholaswylde.com">bath@nicholaswylde.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; <script>document.write(new Date().getFullYear())</script> Wylde Jewellers - Bristol. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- JavaScript for smooth scrolling and mobile navigation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Navigation Toggle
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('navMenu');
+
+            hamburger.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                hamburger.classList.toggle('open'); // Optional: for animating hamburger icon
+            });
+
+            // Close nav menu when a link is clicked (for smooth scroll)
+            document.querySelectorAll('#navMenu a').forEach(item => {
+                item.addEventListener('click', function() {
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        hamburger.classList.remove('open');
+                    }
+                });
+            });
+
+            // Smooth Scrolling for all internal links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        const headerOffset = document.querySelector('.navbar').offsetHeight; // Height of sticky header
+                        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                        const offsetPosition = elementPosition - headerOffset - 20; // 20px extra padding
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
